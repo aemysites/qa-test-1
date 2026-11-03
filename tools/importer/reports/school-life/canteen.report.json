@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/canteen",
+  "path": "school-life/canteen",
+  "timestamp": "2026-11-02T09:50:55.823Z",
+  "title": "Canteen",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow"
+  ]
+}

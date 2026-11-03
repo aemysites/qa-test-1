@@ -1,0 +1,78 @@
+.section-nav nav {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.section-nav .section-nav-sr-heading {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.section-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.section-nav li {
+  margin: 0;
+  border-top: 1px solid var(--grey-04);
+}
+
+.section-nav-header {
+  border-bottom: 2px solid var(--brand-dark);
+}
+
+.section-nav-header + ul > li:first-child {
+  border-top: 0;
+}
+
+.section-nav a:any-link {
+  display: block;
+  padding: 16px;
+  color: var(--text-color);
+  font-weight: var(--font-weight-normal);
+  text-decoration: none;
+}
+
+.section-nav a:hover {
+  background-color: var(--link-hover-bg);
+  outline-width: 0;
+}
+
+.section-nav a:focus-visible {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 0;
+}
+
+.section-nav li li a:any-link {
+  padding-left: 32px;
+}
+
+.section-nav li li li a:any-link {
+  padding-left: 48px;
+}
+
+.section-nav a.is-current:any-link {
+  background-color: var(--off-white);
+}
+
+.section-nav .section-nav-header a:any-link {
+  display: flex;
+  gap: 4px;
+  padding: 8px 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.section-nav nav > ul > li.is-active {
+  border-left: 2px solid var(--brand-accent);
+}
+
+.section-nav li.is-active > a:any-link {
+  font-weight: var(--font-weight-bold);
+}

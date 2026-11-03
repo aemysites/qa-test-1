@@ -1,0 +1,11 @@
+{
+  "type": "da",
+  "sites": {
+    "qa-test-1": {
+      "previewOrg": "aemysites",
+      "previewSite": "qa-test-1",
+      "contentHostUrl": "https://content.da.live/aemysites/qa-test-1/",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

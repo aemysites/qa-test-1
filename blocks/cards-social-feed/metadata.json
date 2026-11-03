@@ -1,0 +1,27 @@
+{
+  "variantName": "cards-social-feed",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: social post cards (post image, truncated linked excerpt, Facebook icon, arrow) that turn into a carousel on mobile."
+  ],
+  "contentPattern": [
+    "Dynamic social feed list: each item links to its post detail page and the count varies with the feed; a repeating card structure."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Social post cards: post image, truncated linked excerpt, arrow and network icon; 3-column grid on desktop, horizontal swipe carousel on mobile.",
+    "pagesUsing": [
+      "/index",
+      "/school-life/events"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for social media post teasers that link out to the post. Use cards-linked-arrow for internal navigation cards.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/",
+  "tableStructure": [
+    "One row per post: cell 1 image, cell 2 linked excerpt"
+  ]
+}

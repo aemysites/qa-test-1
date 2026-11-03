@@ -1,0 +1,27 @@
+.widget-planning-report {
+  display: block;
+  color: var(--text-color);
+}
+
+.widget-planning-report.is-empty {
+  display: none;
+}
+
+.widget-planning-report .widget-planning-report-list {
+  margin: 0;
+  padding: 0 0 0 40px;
+  list-style: disc outside;
+}
+
+.widget-planning-report .widget-planning-report-list li {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.widget-planning-report .widget-planning-report-link:any-link {
+  color: var(--link-color);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
+}

@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/newsletters",
+  "path": "school-life/newsletters",
+  "timestamp": "2026-11-02T09:51:25.776Z",
+  "title": "Newsletters",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text",
+    "accordion-bar",
+    "cards-social-feed"
+  ]
+}

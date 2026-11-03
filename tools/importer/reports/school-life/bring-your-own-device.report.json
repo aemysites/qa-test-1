@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/bring-your-own-device",
+  "path": "school-life/bring-your-own-device",
+  "timestamp": "2026-11-02T09:50:51.155Z",
+  "title": "Bring your own device",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow"
+  ]
+}

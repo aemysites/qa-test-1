@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/facilities-and-resources",
+  "path": "about-us/facilities-and-resources",
+  "timestamp": "2026-11-02T09:48:08.505Z",
+  "title": "Facilities and resources",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text",
+    "carousel-gallery"
+  ]
+}

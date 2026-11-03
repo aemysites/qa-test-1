@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/uniform",
+  "path": "school-life/uniform",
+  "timestamp": "2026-11-02T09:52:44.952Z",
+  "title": "Uniform",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar",
+    "carousel-gallery"
+  ]
+}

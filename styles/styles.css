@@ -10,64 +10,13 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav height */
-  --nav-height: 64px;
-}
+@import url('brand.css');
 
 /* fallback fonts */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
+  font-family: public-sans-fallback;
+  size-adjust: 102%;
   src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
-@media (width >= 900px) {
-  :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
-  }
 }
 
 body {
@@ -76,8 +25,8 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-size: var(--body-font-size-s);
+  line-height: var(--body-line-height);
 }
 
 body.appear {
@@ -98,40 +47,101 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* typography */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin: 0;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--heading-line-height);
   scroll-margin: 40px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
 h2 { font-size: var(--heading-font-size-xl); }
-h3 { font-size: var(--heading-font-size-l); }
-h4 { font-size: var(--heading-font-size-m); }
-h5 { font-size: var(--heading-font-size-s); }
-h6 { font-size: var(--heading-font-size-xs); }
+
+h3 {
+  font-size: var(--heading-font-size-l);
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: var(--heading-font-size-m);
+  line-height: 1.33;
+}
+
+@media (width >= 900px) {
+  h3 { line-height: 1.33; }
+  h4 { line-height: 1.4; }
+}
+
+h5 {
+  font-size: var(--heading-font-size-s);
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: var(--heading-font-size-xs);
+  line-height: 1.35;
+}
+
+* + h1,
+* + h2 {
+  margin-top: 48px;
+}
+
+* + h3 {
+  margin-top: 32px;
+}
+
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 24px;
+}
 
 p,
 dl,
 ol,
 ul,
 pre,
-blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+blockquote,
+table {
+  margin: 16px 0 0;
+}
+
+main > .section > div > :first-child,
+main .block > div > div > :first-child,
+li > :first-child {
+  margin-top: 0;
+}
+
+ul,
+ol {
+  padding-left: 40px;
+}
+
+li {
+  margin-top: 8px;
+}
+
+li > ul,
+li > ol {
+  margin-top: 8px;
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-bold);
 }
 
 code,
 pre {
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-xs);
 }
 
 pre {
@@ -140,10 +150,6 @@ pre {
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
-}
-
-main > div {
-  margin: 40px 16px;
 }
 
 input,
@@ -156,126 +162,123 @@ button {
 /* links */
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  text-decoration: underline;
   overflow-wrap: break-word;
 }
 
+a:visited {
+  color: var(--visited-color);
+}
+
 a:hover {
-  color: var(--link-hover-color);
-  text-decoration: underline;
+  background-color: var(--link-hover-bg);
+  outline: 2px solid var(--link-hover-bg);
 }
 
-/* buttons */
-p.button-wrapper {
-  margin: 12px 0;
+a:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 0;
 }
 
-a.button:any-link,
-button.button {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 100%;
+a:active {
+  background-color: var(--link-active-bg);
+  outline-color: var(--link-active-bg);
+}
+
+/* buttons: EDS reset (lone links outside default content/columns read as links) */
+main .button-container {
+  display: inline;
+}
+
+main a.button:any-link {
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--link-color);
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0;
   margin: 0;
+  text-decoration: underline;
+  white-space: normal;
+}
+
+/* buttons: NSW filled button, used for standalone links in default content and columns */
+main p.button-wrapper {
+  display: block;
+  margin-top: 16px;
+}
+
+main .default-content-wrapper a.button:any-link,
+main [class^="columns-"] a.button:any-link,
+main .hero-card-overlay a.button:any-link,
+main a.button.primary:any-link,
+main a.button.accent:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font: inherit;
-  font-weight: 500;
-  line-height: 1.25;
+  border-radius: var(--border-radius);
+  padding: 10px 22px;
+  background-color: var(--brand-dark);
+  color: var(--text-light-color);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+  text-align: center;
   text-decoration: none;
+  white-space: normal;
   cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  transition: background-image 0.15s ease-in-out;
 }
 
-a.button[aria-disabled="true"],
-button.button:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
+main .default-content-wrapper a.button:hover,
+main [class^="columns-"] a.button:hover,
+main .hero-card-overlay a.button:hover,
+main a.button.primary:hover,
+main a.button.accent:hover {
+  outline: none;
+  background-image: linear-gradient(rgb(255 255 255 / 15%), rgb(255 255 255 / 15%));
 }
 
-a.button.primary,
-button.button.primary {
-  border-color: var(--text-color);
-  background-color: var(--text-color);
-  color: var(--background-color);
+main .default-content-wrapper a.button:active,
+main [class^="columns-"] a.button:active,
+main .hero-card-overlay a.button:active,
+main a.button.primary:active,
+main a.button.accent:active {
+  background-image: linear-gradient(rgb(255 255 255 / 7.5%), rgb(255 255 255 / 7.5%));
 }
 
-a.button.primary:hover,
-a.button.primary:focus-visible,
-button.button.primary:hover,
-button.button.primary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--dark-color);
-  color: var(--light-color);
+main .default-content-wrapper a.button:focus,
+main [class^="columns-"] a.button:focus,
+main .hero-card-overlay a.button:focus,
+main a.button.primary:focus,
+main a.button.accent:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
 }
 
-a.button.primary[aria-disabled="true"],
-a.button.primary[aria-disabled="true"]:hover,
-a.button.primary[aria-disabled="true"]:focus-visible,
-button.button.primary:disabled,
-button.button.primary:disabled:hover,
-button.button.primary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+/* outline variant (authored italic link) */
+main a.button.secondary:any-link {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid var(--brand-dark);
+  border-radius: var(--border-radius);
+  padding: 10px 22px;
+  background: transparent;
+  color: var(--brand-dark);
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  line-height: 24px;
+  text-decoration: none;
 }
 
-a.button.secondary,
-button.button.secondary {
-  border-color: var(--text-color);
-  background-color: transparent;
-  color: var(--text-color);
-}
-
-a.button.secondary:hover,
-a.button.secondary:focus-visible,
-button.button.secondary:hover,
-button.button.secondary:focus-visible {
-  border-color: var(--dark-color);
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-a.button.secondary[aria-disabled="true"],
-a.button.secondary[aria-disabled="true"]:hover,
-a.button.secondary[aria-disabled="true"]:focus-visible,
-button.button.secondary:disabled,
-button.button.secondary:disabled:hover,
-button.button.secondary:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-/* high-impact call-to-action */
-a.button.accent,
-button.button.accent {
-  border-color: var(--link-color);
-  background-color: var(--link-color);
-  color: var(--background-color);
-}
-
-a.button.accent:hover,
-a.button.accent:focus-visible,
-button.button.accent:hover,
-button.button.accent:focus-visible {
-  border-color: var(--link-hover-color);
-  background-color: var(--link-hover-color);
-}
-
-a.button.accent[aria-disabled="true"],
-a.button.accent[aria-disabled="true"]:hover,
-a.button.accent[aria-disabled="true"]:focus-visible,
-button.button.accent:disabled,
-button.button.accent:disabled:hover,
-button.button.accent:disabled:focus-visible {
-  background-color: var(--light-color);
-  border-color: var(--light-color);
-  color: var(--dark-color);
+main a.button.secondary:hover,
+main a.button.secondary:active {
+  outline: none;
+  background-color: var(--brand-dark);
+  color: var(--text-light-color);
 }
 
 main img {
@@ -296,30 +299,150 @@ main img {
 }
 
 /* sections */
-main > .section {
-  margin: 40px 0;
+main {
+  padding: 0;
 }
 
-main > .section > div {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 24px;
+main > .section {
+  margin: 0;
+  padding: var(--section-padding) 0;
 }
 
 main > .section:first-of-type {
-  margin-top: 0;
+  padding-top: 0;
+}
+
+main > .section > div {
+  box-sizing: border-box;
+  max-width: var(--content-max-width);
+  margin: auto;
+  padding: 0 var(--content-padding);
+}
+
+main > .section > div + div {
+  margin-top: 24px;
 }
 
 @media (width >= 900px) {
-  main > .section > div {
-    padding: 0 32px;
+  main > .section > div + div {
+    margin-top: 32px;
   }
 }
 
-/* section metadata */
-main .section.light,
-main .section.highlight {
-  background-color: var(--light-color);
-  margin: 0;
-  padding: 40px 0;
+/* section metadata styles */
+main > .section.dark {
+  background-color: var(--brand-dark);
+  color: var(--text-light-color);
+}
+
+main > .section.light-grey {
+  background-color: var(--off-white);
+  color: var(--text-color);
+}
+
+main > .section.light-yellow {
+  background-color: var(--brand-light);
+  color: var(--text-color);
+}
+
+main > .section:is(.dark, .light-grey, .light-yellow):first-of-type {
+  padding-top: var(--section-padding);
+}
+
+main > .section.dark .default-content-wrapper {
+  padding: 0 32px;
+}
+
+main > .section.dark a:any-link {
+  color: var(--link-light-color);
+}
+
+main > .section.dark a:visited {
+  color: var(--visited-light-color);
+}
+
+main > .section.dark a:hover {
+  background-color: var(--link-hover-light-bg);
+  outline-color: var(--link-hover-light-bg);
+}
+
+main > .section.dark a:focus {
+  outline-color: var(--focus-light-color);
+}
+
+main > .section.dark a:active {
+  background-color: var(--link-active-light-bg);
+  outline-color: var(--link-active-light-bg);
+}
+
+/* on dark sections buttons invert to white with maroon text */
+main > .section.dark .default-content-wrapper a.button:any-link,
+main > .section.dark [class^="columns-"] a.button:any-link {
+  background-color: var(--white);
+  color: var(--brand-dark);
+}
+
+main > .section.dark .default-content-wrapper a.button:hover,
+main > .section.dark [class^="columns-"] a.button:hover {
+  background-image: linear-gradient(rgb(0 0 0 / 7%), rgb(0 0 0 / 7%));
+}
+
+main > .section.dark .default-content-wrapper a.button:active,
+main > .section.dark [class^="columns-"] a.button:active {
+  background-image: linear-gradient(rgb(0 0 0 / 3.5%), rgb(0 0 0 / 3.5%));
+}
+
+main > .section.dark .default-content-wrapper a.button:focus,
+main > .section.dark [class^="columns-"] a.button:focus {
+  outline-color: var(--focus-light-color);
+}
+
+/* the full-bleed hero section carries no padding (as on the source) */
+main > .section.hero-card-overlay-container {
+  padding: 0;
+}
+
+/* inner pages: breadcrumb above, section navigation sidebar beside the content */
+main.has-section-nav > .section.breadcrumb-container {
+  padding: 0;
+}
+
+main.has-section-nav > .section.section-nav-container {
+  display: none;
+}
+
+main.has-section-nav > .section.section-nav-container + .section {
+  padding-top: 8px;
+}
+
+@media (width >= 900px) {
+  main.has-section-nav {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    align-content: start;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+  }
+
+  main.has-section-nav > .section {
+    grid-column: 2;
+  }
+
+  main.has-section-nav > .section.breadcrumb-container {
+    grid-column: 1 / -1;
+  }
+
+  main.has-section-nav > .section.section-nav-container {
+    display: block;
+    grid-column: 1;
+    padding: 16px 48px 16px 16px;
+  }
+
+  main.has-section-nav > .section.section-nav-container > div {
+    padding: 0;
+  }
+
+  main.has-section-nav > .section.section-nav-container + .section {
+    padding-top: 16px;
+  }
 }

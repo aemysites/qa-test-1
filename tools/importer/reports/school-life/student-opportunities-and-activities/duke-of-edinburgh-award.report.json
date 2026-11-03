@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/duke-of-edinburgh-award",
+  "path": "school-life/student-opportunities-and-activities/duke-of-edinburgh-award",
+  "timestamp": "2026-11-02T09:52:10.716Z",
+  "title": "Duke of Edinburgh Award",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar",
+    "table-bordered",
+    "carousel-gallery",
+    "cards-event"
+  ]
+}

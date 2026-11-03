@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/careers",
+  "path": "learning-and-support/careers",
+  "timestamp": "2026-11-02T09:49:42.645Z",
+  "title": "Careers",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "carousel-gallery"
+  ]
+}

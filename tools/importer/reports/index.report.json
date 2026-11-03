@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/",
+  "path": "index",
+  "timestamp": "2026-11-02T09:47:48.791Z",
+  "title": "Fort Street High School",
+  "template": "home",
+  "blocks": [
+    "hero-card-overlay",
+    "cards-linked-arrow",
+    "cards-linked-arrow",
+    "columns-banner",
+    "columns-banner",
+    "columns-image-text",
+    "columns-image-text",
+    "columns-image-text",
+    "cards-social-feed"
+  ]
+}

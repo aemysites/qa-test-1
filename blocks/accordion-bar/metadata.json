@@ -1,0 +1,28 @@
+{
+  "variantName": "accordion-bar",
+  "baseBlock": "accordion",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: stacked full-width filled bars (light grey) with bold title and a maroon chevron at the right, separated by small gaps; panel holds rich text (paragraphs, lists, h3, tables). No existing accordion variant."
+  ],
+  "contentPattern": [
+    "Interactive expand/collapse component."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Expandable sections shown as stacked grey title bars with a chevron; each opens a rich-text panel. Use for entry pathways, policies and program lists.",
+    "pagesUsing": [
+      "/about-us/enrol",
+      "/about-us/policies-and-reports",
+      "/learning-and-support/high-potential-and-gifted-education"
+    ],
+    "reuseCount": 3,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use when long content can be grouped under short titles that readers scan before opening. Keep titles as plain text (no headings); panels take any rich text.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/about-us/enrol",
+  "tableStructure": [
+    "One row per item: cell 1 title (plain text), cell 2 panel content (paragraphs, headings, lists, links, tables)"
+  ]
+}

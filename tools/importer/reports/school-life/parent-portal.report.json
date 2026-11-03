@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/parent-portal",
+  "path": "school-life/parent-portal",
+  "timestamp": "2026-11-02T09:51:30.004Z",
+  "title": "Parent portal",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text",
+    "columns-image-text"
+  ]
+}

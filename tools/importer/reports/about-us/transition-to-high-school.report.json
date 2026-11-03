@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/transition-to-high-school",
+  "path": "about-us/transition-to-high-school",
+  "timestamp": "2026-11-02T09:49:13.203Z",
+  "title": "Transition to high school",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text"
+  ]
+}

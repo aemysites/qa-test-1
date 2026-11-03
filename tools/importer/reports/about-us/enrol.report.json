@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/enrol",
+  "path": "about-us/enrol",
+  "timestamp": "2026-11-02T09:48:03.605Z",
+  "title": "Enrol",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text",
+    "accordion-bar",
+    "embed-iframe"
+  ]
+}

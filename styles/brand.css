@@ -1,0 +1,82 @@
+/* Fort Street High School (NSW Department of Education design system, school theme) */
+:root {
+  /* brand palette */
+  --brand-dark: #630019;
+  --brand-light: #fde79a;
+  --brand-accent: #d7153a;
+  --brand-supplementary: #002664;
+  --grey-01: #22272b;
+  --grey-02: #495054;
+  --grey-03: #cdd3d6;
+  --grey-04: #ebebeb;
+  --off-white: #f2f2f2;
+  --white: #fff;
+  --brand-dark-rgb: 99, 0, 25;
+
+  /* colors */
+  --background-color: var(--white);
+  --light-color: var(--off-white);
+  --dark-color: var(--brand-dark);
+  --text-color: var(--grey-01);
+  --text-light-color: var(--white);
+  --link-color: var(--brand-dark);
+  --link-light-color: rgb(239 230 232);
+  --link-hover-bg: rgb(99 0 25 / 10%);
+  --link-active-bg: rgb(99 0 25 / 20%);
+  --link-hover-light-bg: rgb(239 230 232 / 10%);
+  --link-active-light-bg: rgb(239 230 232 / 20%);
+  --visited-color: rgb(112 83 29);
+  --visited-light-color: rgb(226 221 210);
+  --focus-color: rgb(178 0 110);
+  --focus-light-color: rgb(240 204 226);
+  --border-color: var(--brand-accent);
+
+  /* fonts */
+  --body-font-family: 'Public Sans', public-sans-fallback, sans-serif;
+  --heading-font-family: 'Public Sans', public-sans-fallback, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* body sizes */
+  --body-font-size-m: 20px;
+  --body-font-size-s: 16px;
+  --body-font-size-xs: 14px;
+  --body-line-height: 1.5;
+
+  /* heading sizes (mobile) */
+  --heading-font-size-xxl: 36px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 22px;
+  --heading-font-size-m: 18px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+  --heading-line-height: 1.25;
+
+  /* spacing */
+  --section-padding: 16px;
+  --content-max-width: 1200px;
+  --content-padding: 16px;
+  --border-radius: 4px;
+  --box-shadow: 0 4px 12px 0 rgb(0 0 0 / 15%);
+
+  /* nav height (mobile masthead) */
+  --nav-height: 147px;
+}
+
+@media (width >= 900px) {
+  :root {
+    /* heading sizes (desktop) */
+    --heading-font-size-xxl: 48px;
+    --heading-font-size-xl: 32px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 16px;
+    --heading-font-size-xs: 14px;
+
+    /* spacing */
+    --section-padding: 32px;
+
+    /* nav height (masthead 116px + main nav bar 56px) */
+    --nav-height: 172px;
+  }
+}

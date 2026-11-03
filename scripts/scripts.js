@@ -10,7 +10,12 @@ import {
   loadSections,
   loadCSS,
   buildBlock,
+  readBlockConfig,
+  toCamelCase,
+  toClassName,
+  getMetadata,
 } from './aem.js';
+import { currentPagePath } from './section-tree.js';
 
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
@@ -74,6 +79,23 @@ function buildWidgetAutoBlocks(main) {
 }
 
 /**
+ * Adds the breadcrumb and section navigation sidebar to inner pages.
+ * @param {Element} main The container element
+ */
+function buildPageNavAutoBlocks(main) {
+  if (main !== document.querySelector('body > main')) return;
+  if (currentPagePath() === '/' || getMetadata('section-nav') === 'off') return;
+  const contentSections = main.querySelectorAll(':scope > div').length;
+  const breadcrumb = document.createElement('div');
+  breadcrumb.append(buildBlock('breadcrumb', ''));
+  const sectionNav = document.createElement('div');
+  sectionNav.append(buildBlock('section-nav', ''));
+  sectionNav.dataset.contentSections = contentSections;
+  main.prepend(breadcrumb, sectionNav);
+  main.classList.add('has-section-nav');
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
@@ -97,6 +119,7 @@ function buildAutoBlocks(main) {
       });
     }
     buildWidgetAutoBlocks(main);
+    buildPageNavAutoBlocks(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -121,10 +144,15 @@ function decorateButtons(main) {
       if (new URL(a.href).href === new URL(text, window.location).href) return;
     } catch { /* continue */ }
 
-    // require authored formatting for buttonization
+    // a link alone in its paragraph is a button (as on the source site);
+    // authored bold/italic picks the primary/secondary variant
     const strong = a.closest('strong');
     const em = a.closest('em');
-    if (!strong && !em) return;
+    if (!strong && !em) {
+      p.className = 'button-wrapper';
+      a.className = 'button';
+      return;
+    }
 
     p.className = 'button-wrapper';
     a.className = 'button';
@@ -143,6 +171,31 @@ function decorateButtons(main) {
 }
 
 /**
+ * Applies section metadata: `style` values become section classes,
+ * other keys become data attributes. The vendored aem.js omits this.
+ * @param {Element} main The main element
+ */
+function decorateSectionMetadata(main) {
+  main.querySelectorAll(':scope > .section div.section-metadata').forEach((sectionMeta) => {
+    const section = sectionMeta.closest('.section');
+    const meta = readBlockConfig(sectionMeta);
+    Object.keys(meta).forEach((key) => {
+      if (key === 'style') {
+        meta.style.split(',')
+          .filter((style) => style)
+          .map((style) => toClassName(style.trim()))
+          .forEach((style) => section.classList.add(style));
+      } else {
+        section.dataset[toCamelCase(key)] = meta[key];
+      }
+    });
+    const wrapper = sectionMeta.parentElement;
+    sectionMeta.remove();
+    if (wrapper !== section && !wrapper.children.length) wrapper.remove();
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -151,6 +204,7 @@ export function decorateMain(main) {
   decorateIcons(main);
   buildAutoBlocks(main);
   decorateSections(main);
+  decorateSectionMetadata(main);
   decorateBlocks(main);
   decorateButtons(main);
 }

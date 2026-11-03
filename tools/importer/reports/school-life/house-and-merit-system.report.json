@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/house-and-merit-system",
+  "path": "school-life/house-and-merit-system",
+  "timestamp": "2026-11-02T09:51:13.018Z",
+  "title": "House and Merit System",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text"
+  ]
+}

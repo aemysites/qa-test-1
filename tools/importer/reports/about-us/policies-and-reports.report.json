@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/policies-and-reports",
+  "path": "about-us/policies-and-reports",
+  "timestamp": "2026-11-02T09:48:27.387Z",
+  "title": "Policies and reports",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar",
+    "widget-planning-report",
+    "widget-planning-report"
+  ]
+}

@@ -1,0 +1,68 @@
+.embed-iframe {
+  position: relative;
+  width: 100%;
+}
+
+.embed-iframe .embed-iframe-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.embed-iframe .embed-iframe-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-iframe .embed-iframe-placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.embed-iframe .embed-iframe-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* play affordance over the poster */
+.embed-iframe .embed-iframe-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -50%);
+  border-style: solid;
+  border-width: 20px 0 20px 34px;
+  border-color: transparent transparent transparent #fff;
+  filter: drop-shadow(0 0 4px rgb(0 0 0 / 60%));
+}
+
+/* skip link: moved off-screen until focused, then shown just above the embed (as on source) */
+.embed-iframe .embed-iframe-skip {
+  position: absolute;
+  left: -10000px;
+  z-index: 1;
+  overflow: hidden;
+  font-size: var(--body-font-size-xs);
+}
+
+.embed-iframe .embed-iframe-skip:focus {
+  top: -22px;
+  left: 0;
+}
+
+.embed-iframe .embed-iframe-after:focus {
+  outline: none;
+}

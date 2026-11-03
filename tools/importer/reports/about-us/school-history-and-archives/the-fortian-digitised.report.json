@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/school-history-and-archives/the-fortian-digitised",
+  "path": "about-us/school-history-and-archives/the-fortian-digitised",
+  "timestamp": "2026-11-02T09:48:58.659Z",
+  "title": "The Fortian Digitised",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar"
+  ]
+}

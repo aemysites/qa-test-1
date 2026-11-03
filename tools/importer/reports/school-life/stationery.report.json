@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/stationery",
+  "path": "school-life/stationery",
+  "timestamp": "2026-11-02T09:51:36.228Z",
+  "title": "Stationery",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow"
+  ]
+}

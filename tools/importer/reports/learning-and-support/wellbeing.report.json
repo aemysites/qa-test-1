@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/wellbeing",
+  "path": "learning-and-support/wellbeing",
+  "timestamp": "2026-11-02T09:49:57.250Z",
+  "title": "Wellbeing",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar",
+    "accordion-bar",
+    "accordion-bar",
+    "table-row-lines",
+    "table-row-lines"
+  ]
+}

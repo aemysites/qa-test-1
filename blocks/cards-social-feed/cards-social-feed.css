@@ -1,0 +1,298 @@
+/* cards-social-feed: values from the source NSW card / facebook-feed computed styles */
+
+/* mobile carousel controls (prev / next) */
+.cards-social-feed .cards-social-feed-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  margin: 0 4px 8px 0;
+  padding-top: 8px;
+}
+
+.cards-social-feed .cards-social-feed-controls button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: 2px solid var(--brand-dark);
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--brand-dark);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cards-social-feed .cards-social-feed-controls button:hover {
+  background-color: rgb(0 38 100 / 10%);
+}
+
+.cards-social-feed .cards-social-feed-controls button:active {
+  transform: translateY(1px);
+}
+
+.cards-social-feed .cards-social-feed-controls button:focus-visible {
+  outline: 3px solid rgb(0 134 179);
+  outline-offset: 1px;
+}
+
+.cards-social-feed .cards-social-feed-controls button[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+  border-color: rgb(0 38 100 / 20%);
+}
+
+.cards-social-feed .cards-social-feed-controls svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  fill: none;
+  stroke: currentcolor;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+}
+
+/* track: swipe carousel on mobile */
+.cards-social-feed .cards-social-feed-track {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0 -8px;
+  padding: 8px 56px 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 56px;
+  scrollbar-width: none;
+}
+
+.cards-social-feed .cards-social-feed-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* card */
+.cards-social-feed .cards-social-feed-card {
+  position: relative;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  scroll-snap-align: start;
+}
+
+.cards-social-feed .cards-social-feed-card.is-linked {
+  cursor: pointer;
+}
+
+.cards-social-feed .cards-social-feed-card:focus-within {
+  outline: 3px solid rgb(0 134 179);
+  outline-offset: 3px;
+}
+
+.cards-social-feed .cards-social-feed-card-image {
+  position: relative;
+  height: 200px;
+  min-height: 200px;
+}
+
+.cards-social-feed .cards-social-feed-card-image picture {
+  display: block;
+  height: 100%;
+}
+
+.cards-social-feed .cards-social-feed-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.cards-social-feed .cards-social-feed-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px 16px 62px;
+  border: 1px solid var(--grey-03);
+  border-top-width: 0;
+  border-radius: 0 0 4px 4px;
+  background-color: var(--white);
+  font-size: var(--body-font-size-s);
+  line-height: 24px;
+  transition: background 0.15s ease-in-out, border 0.15s ease-in-out;
+}
+
+.cards-social-feed .cards-social-feed-copy {
+  display: -webkit-box;
+  width: 84%;
+  min-height: 4.5rem;
+  max-height: 4.5em;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  transition: color 0.15s ease-in-out;
+}
+
+main .cards-social-feed a.cards-social-feed-link:any-link,
+main .cards-social-feed a.cards-social-feed-link:hover,
+main .cards-social-feed a.cards-social-feed-link:focus {
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.cards-social-feed .is-linked .cards-social-feed-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* arrow (Material "east") and Facebook icon */
+.cards-social-feed .cards-social-feed-arrow,
+.cards-social-feed .cards-social-feed-network {
+  position: absolute;
+  color: var(--brand-dark);
+  line-height: 0;
+  transition: color 0.15s ease-in-out;
+}
+
+.cards-social-feed .cards-social-feed-arrow {
+  bottom: 16px;
+  left: 16px;
+}
+
+.cards-social-feed .cards-social-feed-network {
+  right: 16px;
+  bottom: 20px;
+}
+
+.cards-social-feed .cards-social-feed-arrow svg {
+  width: 30px;
+  height: 30px;
+  fill: currentcolor;
+}
+
+.cards-social-feed .cards-social-feed-network svg {
+  width: 24px;
+  height: 24px;
+  fill: currentcolor;
+}
+
+/* hover */
+.cards-social-feed .cards-social-feed-card:hover .cards-social-feed-card-body {
+  border-color: transparent;
+  background-color: var(--brand-dark);
+  color: var(--text-light-color);
+}
+
+.cards-social-feed .cards-social-feed-card:hover .cards-social-feed-arrow,
+.cards-social-feed .cards-social-feed-card:hover .cards-social-feed-network {
+  color: var(--text-light-color);
+}
+
+/* dot navigation */
+.cards-social-feed .cards-social-feed-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 0 8px;
+  line-height: 0;
+}
+
+.cards-social-feed .cards-social-feed-dot {
+  width: 21.33px;
+  height: 21.33px;
+  margin: 0 3.33px;
+  padding: 4px;
+  border: 2px solid var(--brand-dark);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.cards-social-feed .cards-social-feed-dot.is-active {
+  background-color: var(--brand-dark);
+}
+
+.cards-social-feed .cards-social-feed-dot:focus-visible {
+  outline: 3px solid rgb(0 134 179);
+  outline-offset: 2px;
+}
+
+/* tablet and up: card grid with highlight bar */
+@media (width >= 768px) {
+  .cards-social-feed .cards-social-feed-controls,
+  .cards-social-feed .cards-social-feed-dots {
+    display: none;
+  }
+
+  .cards-social-feed .cards-social-feed-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    scroll-snap-type: none;
+  }
+
+  .cards-social-feed .cards-social-feed-card-image::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -4px;
+    left: 0;
+    height: 4px;
+    background-color: var(--brand-accent);
+    transition: background 0.15s ease-in-out;
+  }
+
+  .cards-social-feed .cards-social-feed-card:hover .cards-social-feed-card-image::after {
+    background-color: transparent;
+  }
+
+  .cards-social-feed .cards-social-feed-card-body::before {
+    content: '';
+    flex-shrink: 0;
+    height: 4px;
+  }
+
+  .cards-social-feed .cards-social-feed-network {
+    bottom: 22px;
+  }
+}
+
+@media (width >= 992px) {
+  .cards-social-feed .cards-social-feed-track {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cards-social-feed .cards-social-feed-card-body {
+    padding: 32px 32px 94px;
+  }
+
+  .cards-social-feed .cards-social-feed-arrow {
+    bottom: 32px;
+    left: 32px;
+  }
+
+  .cards-social-feed .cards-social-feed-network {
+    right: 32px;
+    bottom: 37px;
+  }
+}

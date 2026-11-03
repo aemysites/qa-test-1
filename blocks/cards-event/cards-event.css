@@ -1,0 +1,56 @@
+/* source: .content-container .nsw-grid (12-col grid; cards span 12 / 6 / 4) */
+.cards-event > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-event .cards-event-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* source: .nsw-content-block__image */
+.cards-event .cards-event-card-image {
+  margin: 0 0 24px;
+  line-height: 0;
+}
+
+.cards-event .cards-event-card-image picture {
+  display: block;
+}
+
+.cards-event .cards-event-card-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* source: .nsw-content-block__content (h3 22px/1.25 mobile, 24px/1.33 desktop from global h3) */
+.cards-event .cards-event-card-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-event .cards-event-card-body p {
+  margin: 16px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media (width >= 768px) {
+  .cards-event > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (width >= 900px) {
+  .cards-event > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

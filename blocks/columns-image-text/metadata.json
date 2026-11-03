@@ -1,0 +1,33 @@
+{
+  "variantName": "columns-image-text",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: image at natural ratio beside a vertically centred H2, paragraph and button."
+  ],
+  "contentPattern": [
+    "Fixed image | text pair side by side.",
+    "Fixed image | text pair side by side; the maroon color comes from the section style."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Image at natural ratio beside a vertically centred heading, paragraph and button.",
+    "pagesUsing": [
+      "/index",
+      "/about-us/enrol",
+      "/our-community/foundation",
+      "/school-life/travel-to-school",
+      "/about-us/facilities-and-resources",
+      "/school-life/events",
+      "/about-us/transition-to-high-school"
+    ],
+    "reuseCount": 6,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for contained promo/feature rows. Colour comes from section style (e.g. dark).",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/",
+  "tableStructure": [
+    "Row 1: cell 1 image, cell 2 heading + paragraph + CTA link"
+  ]
+}

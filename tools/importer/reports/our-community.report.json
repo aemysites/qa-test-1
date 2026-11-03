@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/our-community",
+  "path": "our-community",
+  "timestamp": "2026-11-02T09:50:03.806Z",
+  "title": "Our community",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "cards-linked-arrow"
+  ]
+}

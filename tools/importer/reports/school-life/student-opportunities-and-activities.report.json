@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities",
+  "path": "school-life/student-opportunities-and-activities",
+  "timestamp": "2026-11-02T09:51:42.095Z",
+  "title": "Student opportunities and activities",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar",
+    "table-bordered"
+  ]
+}

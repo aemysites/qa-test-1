@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/stories-and-highlights",
+  "path": "about-us/stories-and-highlights",
+  "timestamp": "2026-11-02T09:49:08.332Z",
+  "title": "Stories and highlights",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "carousel-gallery",
+    "cards-social-feed"
+  ]
+}

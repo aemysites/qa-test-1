@@ -1,0 +1,20 @@
+{
+  "variantName": "columns-banner",
+  "baseBlock": "columns",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: fixed-height two-column banner, large image filling one half and intro text plus button in the other; the image side switches (flipped) by content order."
+  ],
+  "contentPattern": [
+    "Fixed pair of different content side by side (text | portrait) that never wraps into a grid.",
+    "Fixed image | text pair side by side; color from section style."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Tall two-column banner: a large image fills one half, heading, intro and button in the other. Image side follows authored cell order.",
+  "reuseGuidance": "Use for prominent full-bleed split banners (principal message, apply CTA). For a smaller image beside text use columns-image-text.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/",
+  "tableStructure": [
+    "Row 1: cell 1 text or image, cell 2 image or text"
+  ]
+}

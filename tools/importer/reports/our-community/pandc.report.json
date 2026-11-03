@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/our-community/pandc",
+  "path": "our-community/pandc",
+  "timestamp": "2026-11-02T09:50:34.281Z",
+  "title": "Parents and Citizens Association",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "accordion-bar",
+    "table-bordered",
+    "table-bordered"
+  ]
+}

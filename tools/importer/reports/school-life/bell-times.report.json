@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/bell-times",
+  "path": "school-life/bell-times",
+  "timestamp": "2026-11-02T09:50:44.818Z",
+  "title": "Bell times",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow"
+  ]
+}

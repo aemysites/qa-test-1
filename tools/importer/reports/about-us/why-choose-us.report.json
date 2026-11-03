@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/about-us/why-choose-us",
+  "path": "about-us/why-choose-us",
+  "timestamp": "2026-11-02T09:49:19.816Z",
+  "title": "Why choose us?",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "cards-linked-arrow",
+    "embed-iframe"
+  ]
+}

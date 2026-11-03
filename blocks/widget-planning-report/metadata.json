@@ -1,0 +1,28 @@
+{
+  "variantName": "widget-planning-report",
+  "baseBlock": "widget",
+  "canonicalModel": "configuration",
+  "visualCharacteristics": [
+    "New: dynamic NSW DoE planning/reporting widget that fetches the school's published annual reports or school plan PDFs (by reporttype and schoolcode) and renders them as a bulleted list of PDF links. Built on the project widget loader (/widgets/planningreporting.html?reporttype=..&schoolcode=..)."
+  ],
+  "contentPattern": [
+    "Dynamic, data-driven component configured by key/value rows: cannot be typed as default content.",
+    "Dynamic, data-driven component."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Bulleted list of the school's published annual reports or school excellence plans (PDF links with year, name, type and size), loaded live from the NSW DoE school-plan-report API.",
+    "pagesUsing": [
+      "/about-us/policies-and-reports"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use wherever the school's annual reports (reporttype report) or school plans (reporttype plan) must be listed; the list updates itself as new reports are published. Hidden when the API returns nothing.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/about-us/policies-and-reports",
+  "tableStructure": [
+    "Key/value rows: reporttype | report (annual reports) or plan (school excellence plans); schoolcode | 8504; optional recentreports | <number>",
+    "Alternative (widget convention): one cell with a link /widgets/planningreporting.html?reporttype=report&schoolcode=8504"
+  ]
+}

@@ -1,0 +1,92 @@
+.breadcrumb nav {
+  margin-top: 24px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline-block;
+  margin: 8px 0 0;
+}
+
+.breadcrumb li + li::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: -5px;
+  background-color: currentcolor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8.59 16.59 13.17 12 8.59 7.41 10 6l6 6-6 6z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.breadcrumb a:any-link {
+  display: inline-block;
+  color: var(--link-color);
+  font-weight: var(--font-weight-normal);
+  line-height: 24px;
+  text-decoration: underline;
+}
+
+/* the source's chevron glyph makes linked crumbs taller than the current one */
+.breadcrumb li + li > a:any-link {
+  margin-bottom: 7px;
+}
+
+.breadcrumb .breadcrumb-current {
+  display: inline-block;
+  color: var(--text-color);
+  line-height: 24px;
+}
+
+/* mobile: hide middle crumbs (all but home, the parent and the current page) */
+.breadcrumb ol:not(.is-expanded) li:not(:first-child, :last-child, :nth-last-child(2), .breadcrumb-toggle) {
+  display: none;
+}
+
+.breadcrumb ol.is-expanded .breadcrumb-toggle {
+  display: none;
+}
+
+.breadcrumb .breadcrumb-toggle button {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--text-color);
+  font: inherit;
+  cursor: pointer;
+}
+
+.breadcrumb .breadcrumb-toggle button:hover {
+  background-color: var(--link-hover-bg);
+  outline: 2px solid var(--link-hover-bg);
+}
+
+.breadcrumb .breadcrumb-toggle button:focus-visible {
+  outline: 3px solid var(--focus-color);
+}
+
+@media (width >= 900px) {
+  .breadcrumb nav {
+    padding-bottom: 8px;
+  }
+
+  .breadcrumb li + li > a:any-link {
+    margin-bottom: 11px;
+  }
+
+  .breadcrumb ol:not(.is-expanded) li:not(:first-child, :last-child, :nth-last-child(2), .breadcrumb-toggle) {
+    display: inline-block;
+  }
+
+  .breadcrumb .breadcrumb-toggle {
+    display: none;
+  }
+}

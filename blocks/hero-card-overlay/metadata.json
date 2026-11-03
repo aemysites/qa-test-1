@@ -1,0 +1,20 @@
+{
+  "variantName": "hero-card-overlay",
+  "baseBlock": "hero",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: full-width photo with a boxed white card (heading, copy, CTA) overlaid at the right; no existing hero variants."
+  ],
+  "contentPattern": [
+    "Photo background with overlaid heading, text and CTA at the top of the page: a hero. The photo background belongs to the block, so the section is not colored."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": "Top-of-page welcome hero: full-width photo with a boxed card (heading, intro, CTA) overlaid on the right on desktop; stacks image then card on mobile.",
+  "reuseGuidance": "Use for page-opening heroes whose text sits in a solid card over the photo. Use plain hero when text sits directly on the image.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/",
+  "tableStructure": [
+    "Row 1: background image",
+    "Row 2: heading, paragraph(s), CTA link"
+  ]
+}

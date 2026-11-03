@@ -1,0 +1,28 @@
+{
+  "variantName": "table-bordered",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: full cell grid (outer box plus vertical and horizontal 1px rules) with a bold first (header) row."
+  ],
+  "contentPattern": [
+    "Tabular data (name | role).",
+    "Tabular data (date | event | details)."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Data table with a full cell grid and a bold header row; scrolls horizontally on narrow screens.",
+    "pagesUsing": [
+      "/our-community/foundation",
+      "/school-life/events"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for tabular data where every cell boundary should be visible (directories, calendars). Use table-row-lines for lighter lists with horizontal rules only.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/school-life/events",
+  "tableStructure": [
+    "First row: header cells (bold). Following rows: one data row each, one cell per column; empty cells are allowed"
+  ]
+}

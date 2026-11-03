@@ -1,0 +1,92 @@
+/* accordion-bar: NSW design system accordion (source .accordions .nsw-accordion) */
+.accordion-bar .accordion-bar-item + .accordion-bar-item {
+  margin-top: 8px;
+}
+
+/* title bar */
+.accordion-bar .accordion-bar-item-label {
+  position: relative;
+  display: block;
+  padding: 16px 48px 16px 16px;
+  background-color: var(--off-white);
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.33;
+  text-align: left;
+  cursor: pointer;
+  list-style: none;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.accordion-bar .accordion-bar-item-label::-webkit-details-marker {
+  display: none;
+}
+
+/* chevron: material icon keyboard_arrow_down, 30px, 8px from the right */
+.accordion-bar .accordion-bar-item-label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--brand-dark);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  transform: translateY(-50%);
+  transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out;
+}
+
+.accordion-bar .accordion-bar-item-label:focus {
+  z-index: 100;
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+/* hover and open: maroon bar, white text and chevron */
+.accordion-bar .accordion-bar-item-label:hover,
+.accordion-bar .accordion-bar-item[open] > .accordion-bar-item-label {
+  background-color: var(--brand-dark);
+  color: var(--text-light-color);
+}
+
+.accordion-bar .accordion-bar-item-label:hover::after,
+.accordion-bar .accordion-bar-item[open] > .accordion-bar-item-label::after {
+  background-color: var(--text-light-color);
+}
+
+.accordion-bar .accordion-bar-item[open] > .accordion-bar-item-label::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* panel */
+.accordion-bar .accordion-bar-item-body {
+  padding: 16px;
+}
+
+.accordion-bar .accordion-bar-item-body > :first-child {
+  margin-top: 0;
+}
+
+.accordion-bar .accordion-bar-item-body > :last-child {
+  margin-bottom: 0;
+}
+
+.accordion-bar .accordion-bar-item-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* panels may hold wide tables */
+.accordion-bar .accordion-bar-item-body table {
+  display: block;
+  overflow-x: auto;
+}
+
+@media (width >= 900px) {
+  .accordion-bar .accordion-bar-item-label {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}

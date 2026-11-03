@@ -1,0 +1,64 @@
+/* source: .nsw-table.nsw-table--bordered (NSW design system) */
+.table-bordered .table-bordered-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-bordered .table-bordered-scroll:focus-visible {
+  outline: 3px solid rgb(0 134 179);
+  outline-offset: 3px;
+}
+
+.table-bordered table {
+  width: 100%;
+  min-width: 600px;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  /* tables do not inherit typography in quirks mode */
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-align: left;
+}
+
+.table-bordered thead {
+  border-bottom: 2px solid var(--grey-01);
+}
+
+.table-bordered th,
+.table-bordered td {
+  padding: 12px 8px;
+  border: 1px solid var(--grey-01);
+  text-align: left;
+  vertical-align: baseline;
+}
+
+.table-bordered th {
+  font-weight: var(--font-weight-bold);
+}
+
+.table-bordered th > :first-child,
+.table-bordered td > :first-child {
+  margin-top: 0;
+}
+
+.table-bordered th > :last-child,
+.table-bordered td > :last-child {
+  margin-bottom: 0;
+}
+
+/* inverted (dark) sections: white rules, light focus ring */
+.section.dark .table-bordered thead,
+.section.dark .table-bordered th,
+.section.dark .table-bordered td {
+  border-color: var(--white);
+}
+
+.section.dark .table-bordered .table-bordered-scroll:focus-visible {
+  outline-color: rgb(204 231 240);
+}

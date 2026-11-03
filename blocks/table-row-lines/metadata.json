@@ -1,0 +1,30 @@
+{
+  "variantName": "table-row-lines",
+  "baseBlock": "table",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: no vertical borders, 1px horizontal rules between rows, optional bold header row with a heavier rule beneath (plain \"table\"); the source \"no-header\" option is the same look without the header row, so it maps to this variant with the no-header option."
+  ],
+  "contentPattern": [
+    "Tabular data; each table is its own block, the headings between them stay default content.",
+    "Tabular data."
+  ],
+  "options": [
+    { "class": "no-header", "label": "No Header" }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Light data table with horizontal row rules only; the first row is a bold header unless the no-header option is set (name lists, honour rolls).",
+    "pagesUsing": [
+      "/about-us/hsc-results",
+      "/school-life/travel-to-school"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for simple lists and schedules. Add (no-header) when every row is data, e.g. name lists. Use table-bordered when a full cell grid is needed.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/about-us/hsc-results",
+  "tableStructure": [
+    "First row: header cells (omit by naming the block Table Row Lines (no-header)). Following rows: one data row each, one cell per column; empty cells are allowed"
+  ]
+}

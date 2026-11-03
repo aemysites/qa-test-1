@@ -1,0 +1,310 @@
+{
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://fortstreet-h.schools.nsw.gov.au/"
+      ],
+      "representativeUrl": "https://fortstreet-h.schools.nsw.gov.au/",
+      "description": "Homepage: hero banner, feature cards, principal message banner, image/text promos, quick links, apply banner, key dates and social feed",
+      "blocks": [
+        {
+          "name": "hero-card-overlay",
+          "instances": [
+            ".full-image-banner"
+          ]
+        },
+        {
+          "name": "cards-linked-arrow",
+          "instances": [
+            ".card-container"
+          ]
+        },
+        {
+          "name": "columns-banner",
+          "instances": [
+            ".banner"
+          ]
+        },
+        {
+          "name": "columns-image-text",
+          "instances": [
+            ".columns.columns-2-cols",
+            ".columns"
+          ]
+        },
+        {
+          "name": "cards-social-feed",
+          "instances": [
+            ".facebook-feed"
+          ]
+        }
+      ],
+      "urlPattern": "/",
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero welcome",
+          "selector": [
+            "#main > div.section.nsw-section.nsw-section--brand-dark.nsw-section--invert.full-image-banner-container"
+          ],
+          "style": null,
+          "blocks": [
+            "hero-card-overlay"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "The Fort Street High School difference",
+          "selector": [
+            "#main > div.section.nsw-section.card-container-container:nth-of-type(2)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-linked-arrow"
+          ],
+          "defaultContent": [
+            ".default-content-wrapper > h2"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Principal's message",
+          "selector": [
+            "#main > div.section.nsw-section.nsw-section--off-white.banner-container"
+          ],
+          "style": "light-grey",
+          "blocks": [
+            "columns-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Fort Fest",
+          "selector": [
+            "#main > div.section.nsw-section.columns-container:nth-of-type(4)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-image-text"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "School tours and open evenings",
+          "selector": [
+            "#main > div.section.nsw-section.nsw-section--brand-dark.nsw-section--invert.columns-container"
+          ],
+          "style": "dark",
+          "blocks": [
+            "columns-image-text"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Quick links",
+          "selector": [
+            "#main > div.section.nsw-section.card-container-container:nth-of-type(6)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-linked-arrow"
+          ],
+          "defaultContent": [
+            ".default-content-wrapper > h2"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Ready to apply?",
+          "selector": [
+            "#main > div.section.nsw-section.nsw-section--brand-dark.nsw-section--invert.banner-container"
+          ],
+          "style": "dark",
+          "blocks": [
+            "columns-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Key dates",
+          "selector": [
+            "#main > div.section.nsw-section.columns-container:nth-of-type(8)"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-image-text"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Stay connected on our socials",
+          "selector": [
+            "#main > div.section.nsw-section.facebook-feed-container"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-social-feed"
+          ],
+          "defaultContent": [
+            ".default-content-wrapper > h2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "school-life",
+      "urls": [
+        "https://fortstreet-h.schools.nsw.gov.au/about-us",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/enrol",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/facilities-and-resources",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/hsc-results",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/our-principal-and-staff",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/policies-and-reports",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/policies-and-reports/nsw-public-school-information",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/school-history-and-archives",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/school-history-and-archives/fort-street-archives",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/school-history-and-archives/the-fort-street-museum",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/school-history-and-archives/the-fortian-digitised",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/stories-and-highlights",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/transition-to-high-school",
+        "https://fortstreet-h.schools.nsw.gov.au/about-us/why-choose-us",
+        "https://fortstreet-h.schools.nsw.gov.au/contact-us",
+        "https://fortstreet-h.schools.nsw.gov.au/learning-and-support",
+        "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/additional-learning-support",
+        "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/careers",
+        "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/high-potential-and-gifted-education",
+        "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/learning",
+        "https://fortstreet-h.schools.nsw.gov.au/learning-and-support/wellbeing",
+        "https://fortstreet-h.schools.nsw.gov.au/our-community",
+        "https://fortstreet-h.schools.nsw.gov.au/our-community/alumni",
+        "https://fortstreet-h.schools.nsw.gov.au/our-community/fortians-union",
+        "https://fortstreet-h.schools.nsw.gov.au/our-community/foundation",
+        "https://fortstreet-h.schools.nsw.gov.au/our-community/foundation-tertiary-bursaries",
+        "https://fortstreet-h.schools.nsw.gov.au/our-community/pandc",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/bell-times",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/bring-your-own-device",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/canteen",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/events",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/forms",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/house-and-merit-system",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/lockers-and-lost-property",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/newsletters",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/parent-portal",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/stationery",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/academic-competitions",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/clubs-and-committees",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/creative-and-performing-arts",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/debating-and-public-speaking",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/duke-of-edinburgh-award",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/instrumental-music-program",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/robotics-and-maker-society",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/sport",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/student-opportunities-and-activities/student-leadership-opportunities",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/travel-to-school",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/uniform",
+        "https://fortstreet-h.schools.nsw.gov.au/school-life/uniform/uniform-shop"
+      ],
+      "representativeUrl": "https://fortstreet-h.schools.nsw.gov.au/about-us",
+      "description": "Inner content pages: h1 + intro, then variable sections of cards, columns, accordions, tables, galleries, embeds, event cards and school report widgets, ending with related-page cards",
+      "blocks": [
+        {
+          "name": "cards-linked-arrow",
+          "instances": [
+            ".card-container"
+          ]
+        },
+        {
+          "name": "columns-image-text",
+          "instances": [
+            ".columns"
+          ]
+        },
+        {
+          "name": "accordion-bar",
+          "instances": [
+            ".accordions"
+          ]
+        },
+        {
+          "name": "table-bordered",
+          "instances": [
+            ".table.bordered"
+          ]
+        },
+        {
+          "name": "table-row-lines",
+          "instances": [
+            ".table"
+          ]
+        },
+        {
+          "name": "carousel-gallery",
+          "instances": [
+            ".gallery"
+          ]
+        },
+        {
+          "name": "embed-iframe",
+          "instances": [
+            ".embed"
+          ]
+        },
+        {
+          "name": "cards-event",
+          "instances": [
+            ".content-container"
+          ]
+        },
+        {
+          "name": "cards-social-feed",
+          "instances": [
+            ".facebook-feed"
+          ]
+        },
+        {
+          "name": "widget-planning-report",
+          "instances": [
+            ".planningreporting"
+          ]
+        }
+      ],
+      "urlPattern": "/*",
+      "autoSections": {
+        "selector": "#main > div.section",
+        "styles": {
+          "nsw-section--brand-dark": "dark",
+          "nsw-section--off-white": "light-grey",
+          "nsw-section--brand-light": "light-yellow"
+        }
+      },
+      "sections": [
+        {
+          "id": "about-us-s1",
+          "name": "About us landing: title and section cards",
+          "selector": [
+            "#main > div.section.card-container-container:nth-of-type(1)"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-linked-arrow"
+          ],
+          "defaultContent": [
+            ".default-content-wrapper"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "projectType": "da"
+  }
+}

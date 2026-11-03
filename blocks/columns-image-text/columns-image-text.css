@@ -1,0 +1,72 @@
+/* columns-image-text: image at natural ratio beside a vertically centred text column.
+   Colours (white/dark/light-grey) come from the section style. */
+
+/* mobile: stacked, image always first */
+.columns-image-text .columns-image-text-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.columns-image-text .columns-image-text-row + .columns-image-text-row {
+  margin-top: 32px;
+}
+
+.columns-image-text .columns-image-text-row > div {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.columns-image-text .columns-image-text-img-col {
+  order: 0;
+  line-height: 0;
+}
+
+.columns-image-text .columns-image-text-text-col {
+  order: 1;
+}
+
+.columns-image-text .columns-image-text-img-col picture {
+  display: block;
+}
+
+.columns-image-text .columns-image-text-img-col img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.columns-image-text .columns-image-text-text-col > :first-child {
+  margin-top: 0;
+}
+
+/* NSW buttons are full width on mobile */
+main .columns-image-text p.button-wrapper,
+main .columns-image-text .button-container {
+  display: block;
+  margin-top: 16px;
+}
+
+main .columns-image-text a.button:any-link {
+  display: block;
+  width: 100%;
+}
+
+@media (width >= 900px) {
+  .columns-image-text .columns-image-text-row {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .columns-image-text .columns-image-text-row > div {
+    flex: 1 1 0%;
+    order: 0;
+  }
+
+  main .columns-image-text a.button:any-link {
+    display: inline-block;
+    width: auto;
+  }
+}

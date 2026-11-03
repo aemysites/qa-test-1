@@ -1,0 +1,26 @@
+{
+  "variantName": "cards-event",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: event cards in a 3-column wrapping grid on a grey band: image on top, large H3 event name, bold \"Date:\"/\"Time:\" label lines and optional description; no card chrome, no link or arrow, so not cards-linked-arrow."
+  ],
+  "contentPattern": [
+    "Repeating look-alike event items in a wrapping 3-column grid; item count changes over time: Cards."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Grid of event items (3 per row on desktop): image, event name heading, bold-label Date and Time lines, optional description. Not clickable.",
+    "pagesUsing": [
+      "/school-life/events"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for featured events or other dated items that do not link anywhere. Use cards-linked-arrow when each card links to a page. The grey band comes from section style (light-grey).",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/school-life/events",
+  "tableStructure": [
+    "One row per event: cell 1 image (optional), cell 2 heading (H3 event name), then paragraphs starting with a bold label such as **Date:** and **Time:**, then an optional description"
+  ]
+}

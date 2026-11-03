@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/our-community/foundation",
+  "path": "our-community/foundation",
+  "timestamp": "2026-11-02T09:50:22.165Z",
+  "title": "The Fort Street Foundation",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text",
+    "table-bordered"
+  ]
+}

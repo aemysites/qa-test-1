@@ -1,0 +1,28 @@
+{
+  "variantName": "embed-iframe",
+  "baseBlock": "embed",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: full-content-width responsive iframe embed for providers the library embed does not cover (Brightcove bcove.video player, Google Maps embed), with a skip link before the iframe."
+  ],
+  "contentPattern": [
+    "Embedded third-party player: an interactive component.",
+    "Embedded third-party map: an interactive component."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Responsive 16:9 iframe for a Brightcove video (bcove.video short link) or a Google Maps embed URL, with a keyboard skip link; loads when scrolled into view, or on click when a poster image is authored.",
+    "pagesUsing": [
+      "/about-us/enrol",
+      "/school-life/travel-to-school"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for Brightcove videos, Google Maps place embeds and other iframe-able URLs. Use the standard embed block for YouTube, Vimeo and social posts.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/about-us/enrol",
+  "tableStructure": [
+    "One row, one cell: the embed URL as a link (https://bcove.video/... or https://www.google.com/maps/embed/v1/place?...); optionally a poster image in the same cell for click-to-load"
+  ]
+}

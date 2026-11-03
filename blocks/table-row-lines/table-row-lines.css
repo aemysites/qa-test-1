@@ -1,0 +1,67 @@
+/* scroll container: wide tables scroll sideways instead of overflowing */
+.table-row-lines .table-row-lines-scroll {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-row-lines .table-row-lines-scroll:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+.table-row-lines table {
+  width: 100%;
+  min-width: 600px;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  caption-side: bottom;
+  color: var(--text-color);
+  font-size: var(--body-font-size-s);
+  line-height: 24px;
+}
+
+.table-row-lines th,
+.table-row-lines td {
+  padding: 12px 8px;
+  border: 0;
+  border-bottom: 1px solid var(--grey-01);
+  text-align: left;
+  vertical-align: baseline;
+}
+
+/* header row: bold with a heavier rule beneath */
+.table-row-lines th {
+  font-weight: var(--font-weight-bold);
+}
+
+.table-row-lines thead {
+  border-bottom: 2px solid var(--grey-01);
+}
+
+.table-row-lines th > *,
+.table-row-lines td > * {
+  margin: 0;
+}
+
+.table-row-lines th > * + *,
+.table-row-lines td > * + * {
+  margin-top: 16px;
+}
+
+/* dark (inverted) sections: white rules and light focus ring */
+main .section.dark .table-row-lines table {
+  color: inherit;
+}
+
+main .section.dark .table-row-lines thead,
+main .section.dark .table-row-lines th,
+main .section.dark .table-row-lines td {
+  border-color: var(--white);
+}
+
+main .section.dark .table-row-lines .table-row-lines-scroll:focus {
+  outline-color: var(--focus-light-color);
+}

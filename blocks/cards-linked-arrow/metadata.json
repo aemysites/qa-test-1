@@ -1,0 +1,57 @@
+{
+  "variantName": "cards-linked-arrow",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: image-top cards with linked title, copy and a trailing arrow icon, 3 per row; the filled maroon vs white bordered look is colour scheme only, so both card grids share it.",
+    "Options: dark (maroon filled card, light text: /about-us section cards), horizontal (related-page cards; image beside text when an image is present, otherwise text-only), off-white (light filled card: /learning-and-support), highlight (accent bar on top: /learning-and-support/high-potential-and-gifted-education)."
+  ],
+  "contentPattern": [
+    "Repeating look-alike items (image, title, text) in a wrapping grid, each linking to a detail page.",
+    "Six look-alike linked items that wrap in a 3-column grid."
+  ],
+  "options": [
+    {
+      "class": "dark",
+      "label": "Dark"
+    },
+    {
+      "class": "horizontal",
+      "label": "Horizontal"
+    },
+    {
+      "class": "off-white",
+      "label": "Off White"
+    },
+    {
+      "class": "highlight",
+      "label": "Highlight"
+    }
+  ],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Grid of image-top cards (3 per row on desktop), each with a linked title, short description and a trailing arrow; whole card is clickable.",
+    "pagesUsing": [
+      "/index",
+      "/about-us",
+      "/about-us/enrol",
+      "/our-community/foundation",
+      "/about-us/hsc-results",
+      "/school-life/travel-to-school",
+      "/about-us/facilities-and-resources",
+      "/school-life/events",
+      "/about-us/policies-and-reports",
+      "/learning-and-support",
+      "/learning-and-support/high-potential-and-gifted-education",
+      "/about-us/transition-to-high-school"
+    ],
+    "reuseCount": 11,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for navigational card grids linking to detail pages (feature highlights, quick links). Card colour comes from section style.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/",
+  "tableStructure": [
+    "One row per card: cell 1 image, cell 2 linked title + description",
+    "Options in the block name: Cards Linked Arrow (dark | horizontal | off-white | highlight); the image cell may be left empty for text-only related-page cards"
+  ]
+}

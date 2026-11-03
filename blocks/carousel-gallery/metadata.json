@@ -1,0 +1,28 @@
+{
+  "variantName": "carousel-gallery",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": [
+    "New: image gallery slider showing 2 slides per view, each image with a grey caption bar below, prev/next circular arrows top right and dot pagination below."
+  ],
+  "contentPattern": [
+    "Interactive slider with arrows and dots.",
+    "Interactive slider."
+  ],
+  "options": [],
+  "memberVariantIds": [],
+  "usage": {
+    "description": "Photo gallery slider: each slide is an image with a caption bar; 2 slides per view on tablet and desktop, 1 on mobile, with prev/next buttons and dot pagination.",
+    "pagesUsing": [
+      "/about-us/facilities-and-resources",
+      "/learning-and-support/high-potential-and-gifted-education"
+    ],
+    "reuseCount": 2,
+    "lastUsed": "2026-11-02"
+  },
+  "reuseGuidance": "Use for photo galleries with short captions. Use the standard carousel for full-width hero slides with text overlaid on the image.",
+  "sourceUrl": "https://fortstreet-h.schools.nsw.gov.au/about-us/facilities-and-resources",
+  "tableStructure": [
+    "One row per slide: cell 1 image, cell 2 caption text"
+  ]
+}

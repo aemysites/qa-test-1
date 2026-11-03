@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/events",
+  "path": "school-life/events",
+  "timestamp": "2026-11-02T09:51:01.641Z",
+  "title": "Events",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "columns-image-text",
+    "table-bordered",
+    "cards-event",
+    "cards-social-feed"
+  ]
+}

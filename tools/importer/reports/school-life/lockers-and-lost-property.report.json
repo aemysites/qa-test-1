@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://fortstreet-h.schools.nsw.gov.au/school-life/lockers-and-lost-property",
+  "path": "school-life/lockers-and-lost-property",
+  "timestamp": "2026-11-02T09:51:19.418Z",
+  "title": "Lockers and lost property",
+  "template": "school-life",
+  "blocks": [
+    "cards-linked-arrow",
+    "table-bordered"
+  ]
+}
