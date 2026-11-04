@@ -29,7 +29,8 @@ function normalize(href) {
 
 function parseList(list, parent) {
   return [...list.children].map((li) => {
-    const link = li.querySelector(':scope > a');
+    // Document Authoring wraps the link in a paragraph when the item has a sub-list
+    const link = li.querySelector(':scope > a, :scope > p > a');
     const node = {
       title: link ? link.textContent.trim() : '',
       path: link ? normalize(link.getAttribute('href')) : '',
@@ -47,7 +48,7 @@ async function loadTree() {
   if (!resp.ok) resp = await fetch('/section-nav.plain.html');
   if (!resp.ok) return null;
   const doc = new DOMParser().parseFromString(await resp.text(), 'text/html');
-  const homeLink = doc.querySelector('p > a');
+  const homeLink = doc.querySelector('body > div > p > a');
   const list = doc.querySelector('ul');
   const home = {
     title: homeLink ? homeLink.textContent.trim() : 'Home',

@@ -266,19 +266,26 @@ export default async function decorate(block) {
   if (!fragment) return;
   const { doc, base } = fragment;
   const sectionsInFragment = [...doc.body.children];
-  const isSkip = (sec) => {
-    const links = [...sec.querySelectorAll('a')];
-    return links.length > 0 && links.every((a) => (a.getAttribute('href') || '').startsWith('#'));
-  };
-  const skipSection = sectionsInFragment.find(isSkip);
+  // sections are identified by content, so authored order and extra wrappers don't matter
   const brandSection = sectionsInFragment.find((sec) => sec.querySelector('img'));
   const navSection = sectionsInFragment.find((sec) => sec.querySelector('ul ul'));
+  const brandIndex = sectionsInFragment.indexOf(brandSection);
+  const skipSection = sectionsInFragment
+    .find((sec, i) => i < brandIndex && sec !== navSection && sec.querySelector('a'));
   const toolsSection = sectionsInFragment
     .find((sec) => ![skipSection, brandSection, navSection].includes(sec));
+
+  // list items with a sub-list may wrap their link in a paragraph (Document Authoring)
+  doc.querySelectorAll('li > p').forEach((p) => {
+    if (p.children.length === 1 && p.firstElementChild.tagName === 'A') p.replaceWith(p.firstElementChild);
+  });
 
   // resolve relative image paths against the fragment location
   doc.querySelectorAll('img[src]').forEach((img) => {
     img.src = new URL(img.getAttribute('src'), base).href;
+  });
+  doc.querySelectorAll('source[srcset]').forEach((source) => {
+    source.srcset = new URL(source.getAttribute('srcset'), base).href;
   });
 
   block.textContent = '';
@@ -291,7 +298,13 @@ export default async function decorate(block) {
     const skip = document.createElement('nav');
     skip.className = 'nav-skip';
     skip.setAttribute('aria-label', 'Skip to links');
-    skipSection.querySelectorAll('a').forEach((a) => skip.append(a));
+    // skip links target the main nav and the page content
+    const targets = ['#main-nav', '#main'];
+    skipSection.querySelectorAll('a').forEach((a, i) => {
+      const href = a.getAttribute('href') || '';
+      if (!href.startsWith('#') && targets[i]) a.setAttribute('href', targets[i]);
+      skip.append(a);
+    });
     const main = document.querySelector('main');
     if (main && !main.id) main.id = 'main';
     nav.append(skip);

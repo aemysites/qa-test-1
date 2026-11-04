@@ -11,7 +11,7 @@ async function fetchFooter() {
 }
 
 const isColumnSection = (section) => /^H[4-6]$/.test(section.firstElementChild?.tagName || '');
-const isBrandSection = (section) => !!section.querySelector(':scope > p > a > img');
+const isBrandSection = (section) => !!section.querySelector(':scope > p > a img');
 
 /**
  * Builds a footer band from an authored section and tags its parts.
@@ -72,6 +72,9 @@ export default async function decorate(block) {
   doc.querySelectorAll('img[src]').forEach((img) => {
     img.src = new URL(img.getAttribute('src'), base).href;
     img.loading = 'lazy';
+  });
+  doc.querySelectorAll('source[srcset]').forEach((source) => {
+    source.srcset = new URL(source.getAttribute('srcset'), base).href;
   });
 
   const container = document.createElement('div');
